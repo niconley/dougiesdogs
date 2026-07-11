@@ -200,6 +200,68 @@
       font-size: 1.1rem;
     }
 
+    .menu-subtitle {
+      font-family: 'Lobster', cursive;
+      font-size: 1.7rem;
+      color: var(--red);
+      margin-bottom: 1.5rem;
+    }
+
+    .menu-extras {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .menu-list-card {
+      background: var(--surface);
+      border: 1px solid #2a2a2a;
+      border-top: 3px solid var(--red);
+      border-radius: 6px;
+      padding: 1.85rem;
+    }
+
+    .menu-list-card h3 {
+      font-family: 'Lobster', cursive;
+      font-size: 1.45rem;
+      color: var(--cream);
+      margin-bottom: 1rem;
+    }
+
+    .menu-list-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .menu-list-card li {
+      color: #999;
+      font-size: 0.9rem;
+      position: relative;
+      padding-left: 1.1rem;
+    }
+    .menu-list-card li::before {
+      content: '•';
+      color: var(--red);
+      position: absolute;
+      left: 0;
+    }
+
+    .menu-price-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 0;
+    }
+    .menu-price-list li::before { content: none; }
+    .menu-price-list .price-sm {
+      font-weight: 700;
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
     /* ─── SCHEDULE ────────────────────────────────────────── */
     #schedule { background: var(--dark-2); text-align: center; }
 
@@ -337,48 +399,96 @@
     <div class="section-inner">
       <h2 class="section-title">Our Menu</h2>
       <hr class="section-rule">
+      <h3 class="menu-subtitle">Signature Dogs</h3>
       <div class="menu-grid">
 
         <div class="menu-card">
           <div class="menu-card-icon">🌭</div>
-          <h3>The Classic</h3>
-          <p>All-beef dog on a steamed bun with yellow mustard, sweet relish, onion, tomato, sport peppers, and a pickle spear.</p>
+          <h3>Classic Dog</h3>
+          <p>Ketchup, Mustard &amp; Relish.</p>
+          <div class="price">$5</div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-icon">🥬</div>
+          <h3>The Slaw Dog</h3>
+          <p>Mustard &amp; Coleslaw.</p>
+          <div class="price">$5</div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-icon">🧀</div>
+          <h3>Chili &amp; Cheese Dog</h3>
+          <p>Beef Chili &amp; Nacho Cheese.</p>
           <div class="price">$5</div>
         </div>
 
         <div class="menu-card">
           <div class="menu-card-icon">🔥</div>
-          <h3>The Spicy Dougie</h3>
-          <p>Jalapeño cheddar dog with sriracha aioli, crispy fried onions, and our signature house hot sauce.</p>
-          <div class="price">$7</div>
-        </div>
-
-        <div class="menu-card">
-          <div class="menu-card-icon">🧀</div>
-          <h3>The Cheese Dog</h3>
-          <p>Grilled dog smothered in warm cheddar sauce, caramelized onions, and crumbled bacon bits.</p>
-          <div class="price">$7</div>
-        </div>
-
-        <div class="menu-card">
-          <div class="menu-card-icon">🌿</div>
-          <h3>The Garden Dog</h3>
-          <p>Plant-based dog on a whole wheat bun with fresh avocado, pico de gallo, and cilantro crema.</p>
-          <div class="price">$7</div>
-        </div>
-
-        <div class="menu-card">
-          <div class="menu-card-icon">🍟</div>
-          <h3>Loaded Fries</h3>
-          <p>Crispy fries piled high with cheddar sauce, chili, sour cream, and sliced green onions.</p>
+          <h3>Flamin' Hot Dog</h3>
+          <p>Ketchup, Nacho Cheese &amp; Flamin' Hot Cheetos.</p>
           <div class="price">$5</div>
         </div>
 
         <div class="menu-card">
-          <div class="menu-card-icon">🥤</div>
-          <h3>Drinks</h3>
-          <p>Assorted canned sodas, bottled water, and seasonal lemonade to wash it all down.</p>
-          <div class="price">$2 – $3</div>
+          <div class="menu-card-icon">🌶️</div>
+          <h3>Jalapeño Popper Dog</h3>
+          <p>Jalapeño Cream Cheese &amp; Bacon Bits.</p>
+          <div class="price">$5</div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-icon">🤠</div>
+          <h3>The Cowboy Dog</h3>
+          <p>Nacho Cheese, Crispy Onions &amp; Barbecue Sauce.</p>
+          <div class="price">$5</div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-icon">🧒</div>
+          <h3>Kids Dog</h3>
+          <p>Made with Chicken, Beef, and Pork.</p>
+          <div class="price">$3</div>
+        </div>
+
+      </div>
+
+      <div class="menu-extras">
+
+        <div class="menu-list-card">
+          <h3>Condiments</h3>
+          <ul>
+            <li>Ketchup</li>
+            <li>Mustard</li>
+            <li>Spicy Brown Mustard</li>
+            <li>Relish</li>
+            <li>Mayo</li>
+            <li>Barbecue Sauce</li>
+          </ul>
+        </div>
+
+        <div class="menu-list-card">
+          <h3>Toppings</h3>
+          <ul>
+            <li>Sauerkraut</li>
+            <li>Raw Onions</li>
+            <li>Fried Onions</li>
+            <li>Coleslaw</li>
+            <li>Chili</li>
+            <li>Nacho Cheese</li>
+            <li>Jalapeños</li>
+            <li>Flamin' Hot Cheetos</li>
+            <li>Bacon Bits</li>
+          </ul>
+        </div>
+
+        <div class="menu-list-card">
+          <h3>Sides &amp; Drinks</h3>
+          <ul class="menu-price-list">
+            <li><span>🥤 Soda</span><span class="price-sm">$2</span></li>
+            <li><span>🍟 Chips</span><span class="price-sm">$2</span></li>
+            <li><span>💧 Bottled Water</span><span class="price-sm">$1</span></li>
+          </ul>
         </div>
 
       </div>
